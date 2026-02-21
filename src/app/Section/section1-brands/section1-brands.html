@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <h2 class="text-center mb-4 fw-bold con-hd reveal">Trusted Partner Brands</h2>
+  <div class="slider">
+    <div class="slide-track">
+      @for (item of brands(); track item.name) {
+      <div class="card">
+        <img [src]="item.img" [alt]="item.name" />
+      </div>
+      } @for (item of brands(); track item.name + '_dup') {
+      <div class="card">
+        <img [src]="item.img" [alt]="item.name" />
+      </div>
+      }
+    </div>
+  </div>
+</div>

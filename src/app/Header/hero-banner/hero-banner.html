@@ -1,0 +1,55 @@
+<div #heroRoot class="hero-root" (mouseenter)="onHoverEnter()" (mouseleave)="onHoverLeave()">
+  <div class="carousel">
+    @for (slide of heroSlides; track slide; let i = $index) {
+    <div
+      class="slide"
+      [class.active]="i === current"
+      [style.backgroundImage]="'url(' + slide.image + ')'"
+    >
+      <div class="overlay"></div>
+
+      <div class="container content">
+        <div class="hero-img-wrapper">
+          <img [src]="slide.shapeImage" class="hero-shaped-img" />
+        </div>
+        <div class="text-block">
+          <p class="tag">{{ slide.tag }}</p>
+
+          <h1 class="title">
+            {{ slide.title.replace(slide.highlight, '') }}
+            <span class="highlight">{{ slide.highlight }}</span>
+            {{ slide.title.split(slide.highlight)[1] }}
+          </h1>
+
+          <p class="description">{{ slide.description }}</p>
+
+          <div class="actions">
+            <button class="btn primary">
+              {{ slide.cta1 }}
+              <svg class="icon" viewBox="0 0 24 24">
+                <path
+                  d="M5 12h14M13 5l7 7-7 7"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <button class="btn outline">{{ slide.cta2 }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+
+  <button class="nav prev" (click)="prev()">‹</button>
+  <button class="nav next" (click)="next()">›</button>
+
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>

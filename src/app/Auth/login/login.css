@@ -1,0 +1,112 @@
+body {
+  background-color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  margin: 0;
+}
+
+.signup-container {
+  /* min-height: calc(100vh - 120px); */
+  display: flex;
+  width: 900px;
+  background-color: #fff;
+  margin: 50px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.left-box {
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80')
+    center/cover no-repeat;
+  color: white;
+  width: 50%;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.left-box h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.left-box p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.right-box {
+  width: 50%;
+  padding: 3rem 2rem;
+}
+
+.form-control {
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.btn-dark {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-dark:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.social-icons i {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.social-icons i:hover {
+  background-color: #000;
+  color: white;
+  border-color: #000;
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .left-box,
+  .right-box {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .left-box {
+    height: 200px;
+  }
+}

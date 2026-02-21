@@ -1,0 +1,121 @@
+/* --rb: #0a2a6c;
+  --pdr: #a8c7ff;
+  --wmb: #e8d3b5; */
+
+.py-5 {
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+}
+
+.con-hd1 {
+  margin: 2rem 0 2rem 0 !important;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'Lora', serif;
+  color: var(--secondary-color);
+}
+
+/* Feature Cards Styling */
+.feature-card {
+  background: var(--accent-color);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 21rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  max-width: 268px;
+  margin: 0 auto;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--wmb);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  background: #e6cba6;
+  transform: scale(1.05);
+}
+
+.feature-icon i {
+  font-size: 28px;
+  color: var(--primary-color);
+}
+
+/* Specific icon colors */
+
+.feature-icon i {
+  color: var(--primary-color);
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.75rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Lora', serif;
+}
+
+.feature-description {
+  color: #444444;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.reveal:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.reveal:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.reveal:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+@media (max-width: 992px) {
+  .con-hd1 {
+    margin: 0 0 2rem 0 !important;
+    font-size: 35px;
+  }
+
+  .card-cont {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 270px) {
+  .con-hd1 {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,37 @@
+<header [class.scrolled]="isScrolled">
+  <div class="navbar">
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="logo"><a routerLink="#">Hi Clothes</a></div>
+    <ul class="links">
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="#">Men</a></li>
+      <li><a routerLink="#">Women</a></li>
+      <li><a routerLink="#">Kid</a></li>
+    </ul>
+    <ul class="icon">
+      <li class="icons">
+        <a routerLink="#"><i class="bi bi-cart2"></i></a>
+      </li>
+
+      <li class="icons">
+        <a routerLink="/login"><i class="bi bi-person"></i></a>
+      </li>
+    </ul>
+
+    <div class="dropdown_menu">
+      <div class="logo1">Hi Clothes</div>
+
+      <ul class="menu_link">
+        <li><a routerLink="#">Home</a></li>
+        <li><a routerLink="#">Men</a></li>
+        <li><a routerLink="#">Women</a></li>
+        <li><a routerLink="#">Kid</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- <router-outlet></router-outlet> -->

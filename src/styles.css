@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+/*  chatgpt recomended color */
+:root {
+  --rb: #0a2a6c;
+  --pdr: #a8c7ff;
+  --wmb: #e8d3b5;
+
+  /* recomended color */
+  --primary-color: #162660;
+  --secondary-color: #d0e6fd;
+  --accent-color: #f1e4d1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: auto;
+  overflow-x: clip;
+}
+
+/* Amsterdam One Regular */
+@font-face {
+  font-family: 'Amsterdam One';
+  src: url('/fonts/AmsterdamOne-eZ12l.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Amsterdam One Slant */
+@font-face {
+  font-family: 'Amsterdam One';
+  src: url('/fonts/AmsterdamOne-Slant.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Amsterdam Two Regular */
+@font-face {
+  font-family: 'Amsterdam Two';
+  src: url('/fonts/AmsterdamTwo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Amsterdam Two Slant */
+@font-face {
+  font-family: 'Amsterdam Two';
+  src: url('/fonts/AmsterdamTwo-Slant.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Amsterdam Three Slant */
+@font-face {
+  font-family: 'Amsterdam Three';
+  src: url('/fonts/AmsterdamThree-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Amsterdam Three Slant TTF */
+@font-face {
+  font-family: 'AmsterdamThree';
+  src: url('/fonts/AmsterdamThree.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}

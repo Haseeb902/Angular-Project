@@ -1,0 +1,168 @@
+.py-5 {
+  background: #d0e6fd;
+  margin-top: 2rem;
+}
+
+/* Section Header */
+.main-title {
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.title-line {
+  width: 40px;
+  height: 2px;
+  background: var(--rb);
+  margin: 10px auto;
+}
+
+.category-label {
+  font-weight: 700;
+  /* color: var(--label-color); */
+  color: var(--rb);
+  border-left: 5px solid var(--label-color);
+  padding-left: 15px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.collection-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--rb);
+  text-transform: uppercase;
+}
+
+/* Product Card Styling */
+.product-item-card {
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.image-wrapper {
+  position: relative;
+  background-color: #f9f9f9; /* Light background like image */
+  overflow: hidden;
+  aspect-ratio: 2 / 3; /* Fashion standard aspect ratio */
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover Overlay */
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.product-item-card:hover .hover-overlay {
+  opacity: 1;
+}
+
+.quick-view {
+  background: white;
+  color: #000;
+  border: none;
+  padding: 8px 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+/* Info Section */
+.product-info {
+  padding: 12px 0;
+  text-align: center; /* Align left like premium brands */
+}
+
+.product-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  letter-spacing: 0.5px;
+}
+
+.product-desc {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+/* Price Section */
+.price-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-size: 0.7rem;
+  color: #999;
+}
+
+.current-price {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--rb);
+}
+
+.badge-discount {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  color: black;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+}
+
+/* Color Swatches */
+.color-swatches {
+  display: flex;
+  gap: 6px;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.swatch.active {
+  outline: 1px solid #000;
+  outline-offset: 2px;
+}
+
+/* Responsive fix for 5 items in a row on Desktop */
+@media (min-width: 992px) {
+  .col-lg-2-4 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+}

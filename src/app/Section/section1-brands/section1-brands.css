@@ -1,0 +1,167 @@
+:host {
+  --primary-color: #162660;
+  --secondary-color: #d0e6fd;
+  --accent-color: #f1e4d1;
+
+  display: block;
+  width: 100%;
+  padding: 30px 0;
+  background: #fffbf6;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.con-hd {
+  padding: 0 0 10px 0;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Lora', serif;
+}
+
+.slider {
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  padding: 30px;
+  background: linear-gradient(to top, #d0e6fd, #f1e4d1);
+  width: 100%;
+}
+
+/* Premium Effect: Fade on left and right edges */
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, #f1e4d1 0%, #d0e6fd27 100%);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 100px; /* Fade width */
+  z-index: 2;
+  pointer-events: none; /* Allows click through if needed */
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slide-track {
+  display: flex;
+  width: max-content; /* Important for infinite loop calculation */
+  animation: scroll 40s linear infinite;
+  padding: 20px 0; /* Space for shadow */
+}
+
+/* PAUSE ON HOVER (Pure CSS) */
+.slider:hover .slide-track {
+  animation-play-state: paused;
+}
+
+.card {
+  width: 220px; /* Bigger, premium size */
+  height: 120px; /* Rectangular looks more professional for logos */
+  margin: 0 20px; /* Better spacing */
+  border-radius: 12px;
+  background: #fff;
+
+  /* Modern Shadow */
+  box-shadow: 0 4px 15px rgba(22, 38, 96, 0.08); /* Using your primary color nicely */
+  border: 1px solid var(--secondary-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 300%;
+  object-fit: cover; /* Logos shouldn't stretch, use contain */
+
+  /* GRAYSCALE EFFECT */
+  filter: grayscale(100%) opacity(0.6);
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+/* HOVER EFFECTS */
+.card:hover {
+  transform: translateY(-5px); /* Lift up effect */
+  box-shadow: 0 10px 25px rgba(22, 38, 96, 0.15);
+  border-color: var(--primary-color);
+  z-index: 1; /* Bring to front */
+}
+
+.card:hover img {
+  filter: grayscale(0%) opacity(1); /* Restore color */
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Moves exactly half way then resets */
+  }
+}
+
+@media (max-width: 992px) {
+  .con-hd {
+    font-size: 30px;
+  }
+
+  .slider::before,
+  .slider::after {
+    background: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .slider {
+    height: 200px; /* Just one card height + padding */
+    padding: 0; /* Optional */
+  }
+
+  .slide-track {
+    flex-direction: column; /* Vertical stack */
+    animation: scroll-vertical 40s linear infinite;
+    width: 100%;
+  }
+
+  @keyframes scroll-vertical {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    } /* Half of duplicated items */
+  }
+
+  .card {
+    width: 80%; /* Full width for mobile */
+    height: 130px; /* Same as card height */
+    margin: 10px auto; /* Spacing between cards */
+  }
+}

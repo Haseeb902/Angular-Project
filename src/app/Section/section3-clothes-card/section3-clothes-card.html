@@ -1,0 +1,113 @@
+<section class="py-5 category-page">
+  <div class="container-fluid">
+    <div class="text-center mb-5 reveal" #revealItem>
+      <h2 class="main-title">Shop by Category</h2>
+      <div class="title-line"></div>
+    </div>
+
+    <div class="category-block mb-5">
+      <h3 class="category-label mb-4" style="--label-color: var(--rb)">Men's Collection</h3>
+      <div class="row g-2 g-md-3">
+        @for (item of menCards; track $index) {
+          <div #revealItem class="col-6 col-md-4 col-lg-2-4 reveal">
+            <div class="product-item-card">
+              <div class="image-wrapper">
+                <img [src]="item.img" [alt]="item.title" class="product-img" />
+                <span class="badge-discount">-50%</span>
+                <div class="hover-overlay">
+                  <button class="quick-view">View Details</button>
+                </div>
+              </div>
+
+              <div class="product-info">
+                <h5 class="product-title">{{ item.title }}</h5>
+                <p class="product-desc">{{ item.desc }}</p>
+
+                <!-- <div class="price-box">
+                <span class="old-price">PKR 5,990</span>
+                <span class="current-price">From PKR 2,990</span>
+              </div> -->
+
+                <!-- <div class="color-swatches">
+                <span class="swatch active" [style.background]="'var(--rb)'"></span>
+                <span class="swatch" [style.background]="'var(--pdr)'"></span>
+                <span class="swatch" style="background: #333"></span>
+              </div> -->
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="category-block mb-5">
+      <h3 class="category-label mb-4" style="--label-color: var(--rb)">Women's Collection</h3>
+      <div class="row g-2 g-md-3">
+        @for (item of womenCards; track $index) {
+          <div #revealItem class="col-6 col-md-4 col-lg-2-4 reveal">
+            <div class="product-item-card">
+              <div class="image-wrapper">
+                <img [src]="item.img" [alt]="item.title" class="product-img" />
+                <span class="badge-discount">-50%</span>
+                <div class="hover-overlay">
+                  <button class="quick-view">View Details</button>
+                </div>
+              </div>
+
+              <div class="product-info">
+                <h5 class="product-title">{{ item.title }}</h5>
+                <p class="product-desc">{{ item.desc }}</p>
+
+                <!-- <div class="price-box">
+                <span class="old-price">PKR 5,990</span>
+                <span class="current-price">From PKR 2,990</span>
+              </div> -->
+
+                <!-- <div class="color-swatches">
+                <span class="swatch active" [style.background]="'var(--rb)'"></span>
+                <span class="swatch" [style.background]="'var(--pdr)'"></span>
+                <span class="swatch" style="background: #333"></span>
+              </div> -->
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="category-block mb-5">
+      <h3 class="category-label mb-4" style="--label-color: var(--rb)">Junior's Collection</h3>
+      <div class="row g-2 g-md-3">
+        @for (item of kidsCards; track $index) {
+          <div #revealItem class="col-6 col-md-4 col-lg-2-4 reveal">
+            <div class="product-item-card">
+              <div class="image-wrapper">
+                <img [src]="item.img" [alt]="item.title" class="product-img" />
+                <span class="badge-discount">-50%</span>
+                <div class="hover-overlay">
+                  <button class="quick-view">View Details</button>
+                </div>
+              </div>
+
+              <div class="product-info">
+                <h5 class="product-title">{{ item.title }}</h5>
+                <p class="product-desc">{{ item.desc }}</p>
+
+                <!-- <div class="price-box">
+                <span class="old-price">PKR 5,990</span>
+                <span class="current-price">From PKR 2,990</span>
+              </div> -->
+
+                <!-- <div class="color-swatches">
+                <span class="swatch active" [style.background]="'var(--rb)'"></span>
+                <span class="swatch" [style.background]="'var(--pdr)'"></span>
+                <span class="swatch" style="background: #333"></span>
+              </div> -->
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
