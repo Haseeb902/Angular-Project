@@ -25,7 +25,7 @@ export class HeroBanner implements OnInit, OnDestroy {
   heroSlides: HeroSlide[] = [
     {
       image: 'img/hero-banner-f.jpg',
-      shapeImage: '/img/hero-banner-F.png',
+      shapeImage: 'img/hero-banner-F.png',
       tag: 'Wear the Moment',
       title: 'Fashion That',
       highlight: 'Defines You',
@@ -35,7 +35,7 @@ export class HeroBanner implements OnInit, OnDestroy {
     },
     {
       image: 'assets/product-women-1.jpg',
-      shapeImage: '/img/hero-banner-W.png',
+      shapeImage: 'img/hero-banner-W.png',
       tag: 'Confidence in Every Look',
       title: 'Grace Meets Modern ',
       highlight: 'Style',
@@ -45,7 +45,7 @@ export class HeroBanner implements OnInit, OnDestroy {
     },
     {
       image: 'assets/product-men-1.jpg',
-      shapeImage: '/img/hero-banner-M.png',
+      shapeImage: 'img/hero-banner-M.png',
       tag: 'Built for Bold Living',
       title: 'Style with ',
       highlight: 'Purpose',
@@ -55,7 +55,7 @@ export class HeroBanner implements OnInit, OnDestroy {
     },
     {
       image: 'assets/product-kids-1.jpg',
-      shapeImage: '/img/hero-banner-K.png',
+      shapeImage: 'img/hero-banner-K.png',
       tag: 'Made for Play',
       title: 'Big Style for Little',
       highlight: 'Legends',
@@ -126,11 +126,4 @@ export class HeroBanner implements OnInit, OnDestroy {
   onHoverLeave() {
     this.startAutoplay();
   }
-
-
-
-
-
-
-  
 }
