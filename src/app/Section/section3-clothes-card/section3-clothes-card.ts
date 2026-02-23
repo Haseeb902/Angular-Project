@@ -31,11 +31,15 @@ export class Section3ClothesCard {
     { title: 'SHIRTS', desc: 'TEXTURED SHIRT', img: 'img/w-card-5.jpeg' },
   ];
 
-  kidsCards = [
-    { title: 'Jacket', desc: 'Cute Jackets', img: 'assets/images/kids-jacket.jpg' },
-    { title: 'T-Shirt', desc: 'Casual T-Shirts', img: 'assets/images/kids-tshirt.jpg' },
-    { title: 'Denim', desc: 'Denim Collection', img: 'assets/images/kids-denim.jpg' },
-    { title: 'Denim', desc: 'Denim Collection', img: 'assets/images/kids-denim.jpg' },
-    { title: 'Denim', desc: 'Denim Collection', img: 'assets/images/kids-denim.jpg' },
+  kidsCard = [
+    {
+      title: 'Print Textured Shirt',
+      desc: 'Relaxed Fit | Boys Toddler',
+      img: 'img/j-card-1.jpg',
+    },
+    { title: 'Relaxed Fit Jeans', desc: 'Relaxed Fit | Boys Junior', img: 'img/j-card-2.jpg' },
+    { title: 'Basic Co-Ord Set', desc: 'Regular Fit | Girls Toddler', img: 'img/j-card-3.jpg' },
+    { title: 'JUMPSUIT', desc: 'REGULAR FIT | GIRLS JUNIOR', img: 'img/j-card-4.jpg' },
+    { title: 'Striped Polo Shirt', desc: 'Regular Fit | Boys Toddler', img: 'img/j-card-5.jpg' },
   ];
 }

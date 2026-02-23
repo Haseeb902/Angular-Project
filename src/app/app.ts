@@ -7,11 +7,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Footer, HttpClientModule, ReactiveFormsModule],
+  imports: [RouterOutlet, Navbar, /*Footer,*/ HttpClientModule, ReactiveFormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
   protected readonly title = signal('Hi_Clothes');
 }
-

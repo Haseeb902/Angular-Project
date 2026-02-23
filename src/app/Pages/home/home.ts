@@ -14,8 +14,10 @@ import { Section5Testimonial } from '../../Section/section-5-testimonial/section
     Section1Brands,
     Section2Card,
     Section3ClothesCard,
+    /*
     Section4Categories,
     Section5Testimonial,
+    */
   ],
   templateUrl: './home.html',
   styleUrls: ['./home.css'],
